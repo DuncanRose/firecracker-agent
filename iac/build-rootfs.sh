@@ -11,7 +11,7 @@ dd if=/dev/zero of=$ROOTFS bs=1M count=$SIZE_MB
 mkfs.ext4 $ROOTFS
 
 # Mount it
-mkdir -p /mnt/agent-rootfs
+sudo mkdir -p /mnt/agent-rootfs
 sudo mount -o loop $ROOTFS /mnt/agent-rootfs
 
 # Install minimal rootfs
